@@ -1,0 +1,12 @@
+<ion-content (press)="showImageActionSheet(result)" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')'}"
+             class="homeContent"
+             padding>
+  <ion-item class="homeSearchItem" no-lines>
+    <ion-input [(ngModel)]="searchWord" class="homeSearchInput" placeholder="Trump, Cats, Anything"
+               type="text"></ion-input>
+    <button (click)="goSearchPage()" [disabled]="!searchWord" clear color="light" ion-button item-right>Search</button>
+  </ion-item>
+  <div class="homeImageDiv">
+    <img class="giphy" src="./../../assets/imgs/giphy.gif"/>
+  </div>
+</ion-content>
